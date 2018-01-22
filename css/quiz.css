@@ -1,0 +1,119 @@
+.btn-default {
+
+    color: #333;
+    background-color: #fff;
+    border-color: #ccc;
+
+}
+
+.margin-top{
+	margin-top:25px;
+}
+
+.my-input{
+	border : none;
+	border-bottom: solid 1px #6d28a7;
+}
+
+.my-input:focus{
+	border : none;
+	border-bottom: solid 1px #87118b;
+}
+
+.grad{
+	background: linear-gradient(to right, #d218ce 0%,#87118b 0%,#6d28a7 68%);
+}
+
+.caption{
+color:#87118b;
+	
+}
+
+.btn-theme1{
+	color:white;
+	background-color:#87118b;
+}
+
+.btn-theme2	{
+	color:white;
+	background-color:#6d28a7;
+}
+
+.cmp-theme1{
+	color:white;
+	background-color:#87118b;
+}
+
+.cmp-theme2	{
+	color:white;
+	background-color:#6d28a7;
+}
+
+.cmp-outline-theme1 {
+    color: #87118b;
+    background-color: transparent;
+    background-image: none;
+    border-color: #87118b;
+}
+
+.cmp-outline-theme1:hover{
+    color:white;
+	background-color:#6d28a7;
+}
+
+.cmp-outline-theme2 {
+    color: #6d28a7;
+    background-color: transparent;
+    background-image: none;
+    border-color: #6d28a7;
+}
+
+.cmp-outline-theme2:hover{
+    color:white;
+	background-color:#87118b;
+}
+
+.cmp-outline-dark {
+    color: #6d28a7;
+    background-color: transparent;
+    background-image: none;
+    border-color: #87118b;
+}
+
+input::placeholder {
+  color: #87118b;
+}
+
+input{
+	color:#6d28a7;
+}
+
+.icon{
+	position: relative;
+  	top: 5px;
+  
+}
+
+.card-button{
+	margin-bottom:10px;
+	
+}
+
+.auto-margin{
+	margin-left: auto;
+	margin-right:auto;
+}
+
+.vertical{
+	height:10vh;
+}
+
+.vertical span{
+	line-height:10vh;
+}
+
+.list-group-item.active{
+	color: #fff;
+	background-color: #87118b;
+	border-color: #87118b;	
+}
