@@ -1,1 +1,164 @@
-<h1>My first site</h1>
+ <!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+	    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+		<link rel="stylesheet" href="css/quiz.css">
+		<link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>QuiZone!</title>
+  </head>
+  <body>
+  <div id="landing" >
+  	<div class="jumbotron grad">
+  		<h1 class="display-4 text-white">QuiZone!</h1>
+  		<p class="lead text-white">A simple & Fun tool to organize quiz.</p>	
+  	</div>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6">
+				<lable class="caption">Player Type</lable>
+			</div>
+		</div>
+		<div class="row margin-top">
+			<div class="col-md-6">
+ 				<input checked data-toggle="toggle" id="toggle-event" data-on="Single Player" data-width="250" data-off="Multi Player" data-onstyle="theme2" data-offstyle="theme1" type="checkbox">
+			 </div>
+		</div>
+		<div class="row margin-top">
+			<div class="col-md-6">
+				<lable class="caption" >Player1 Name</lable>
+			</div>
+			<div class="col-md-6 player2">
+				<lable class="caption" >Player2 Name</lable>
+			</div>
+
+			</div>
+  			<div class="row margin-top">
+  				<div class="col-md-6">
+					<span class="">
+						<i class="material-icons">person</i>
+					</span>
+					<input type="input" id="player1" placeholder="Player1" class="my-input">
+    			</div>
+	
+	 			<div class="col-md-6 player2">
+					<span class="">
+						<i class="material-icons">group</i>
+					</span>
+					<input type="input" id="player2" placeholder="Player2" class="my-input">
+    			</div>
+   
+  			</div>
+  			<div class="row margin-top">
+  				<div class = "col-md">
+  					<button type="button" id="beginBtn" class="text-center btn cmp-theme1 cmp-outline-theme1">Begin</button>
+  				</div>
+  
+  			</div>
+  
+		</div>
+	</div>
+</div>
+<div id="quiz" style="display:none">
+	<nav class="navbar navbar-light grad">
+  		<span class="navbar-brand text-white mb-0 h1">QuiZone!</span>
+	</nav>
+	<div class="container">
+		<div class="row margin-top">
+  			<div class="col-md  card-inverse card-warning mb-3 ">
+  				<div class="card-block">
+    				<blockquote class="card-blockquote">
+						<h4>Question <span id="qNum">0</span></h4>
+      					<h2 id="question">Q</h2>
+      				</blockquote>
+  				</div>
+			</div>
+  		</div>
+		
+		<div class="row card-deck">
+	  		<div class="card col-md-9">
+	    		<div class="card-block">
+					<div class="row btn-theme2 vertical">
+						<span id="pname" class="card-title mb-3 col-md-10">Player 1</span>
+						<div class="col-md-2">
+							<span id= "marks" class="card-title mb-3 ">0</span>
+							<span id= "marks" class="card-title mb-3 ">Points</span>
+						</div>
+						
+					</div>
+					<div id="mchoice" class="row margin-top" style="display:none">
+						<div class="list-group list-group-flush auto-margin col-md-10">
+  							<a href="#"  class="answers list-group-item list-group-item-action" data-toggle="list">A. <span id="opt1"></span></a>
+  							<a href="#"  class="answers list-group-item list-group-item-action" data-toggle="list">B. <span id="opt2"></span></a>
+ 							<a href="#"  class="answers list-group-item list-group-item-action" data-toggle="list">C. <span id="opt3"></span></a>
+  							<a href="#"  class="answers list-group-item list-group-item-action" data-toggle="list">D. <span id="opt4"></span></a>
+						</div>
+						
+					</div>
+					<div id="nochoice" class="row margin-top">
+						<input type="input" id="answer" placeholder="Type your Answer Here" class="auto-margin col-md-8 my-input">
+						<lable class="auto-margin col-md-6" id="answerLable">Answer : <span id="rightAnswer"></span></lable>
+					</div>
+					
+					
+					<div class="row margin-top">
+						<div class = "card-button auto-margin">
+							<button type="button" id="optionsBtn" class="text-center btn  cmp-outline-theme2">Show Options</button>
+  							<button type="button" id="subBtn" class="btn cmp-outline-theme1">Submit</button>
+							<button type="button" id="nxtBtn" class="btn cmp-outline-theme1" style="display:none">Next</button>
+  						</div>
+					</div>
+	    		</div>
+	  		</div>
+	  		<div class="col-md-3">
+	  			<div class="card-block text-center">
+	      			<h4 class="card-title">Scores</h4>
+	      			<div id="p1ScoreDiv" class="col-md-12 auto-margin card cmp-outline-theme1 mb-3 text-center">
+						<div class="card-header cmp-theme1">
+	    					<span class="">
+								<i class="icon material-icons ">person</i>
+							</span>
+							<lable id="p1">Player 1</lable>
+	  					</div>
+				  		<div class="card-block">
+				    		<blockquote class="card-blockquote">
+				      			<h2 id="p1Score">0</h2>
+				      		</blockquote>
+				  		</div>
+					</div>
+					<div id="p2ScoreDiv" class="col-md-12 auto-margin card  cmp-outline-theme2 mb-3 text-center" style="display:none">
+						<div class="card-header cmp-theme2">
+				    		<span class="">
+								<i class="icon material-icons">group</i>
+							</span>
+							<lable id="p2">Player 2</lable>
+				  		</div>
+				  		<div class="card-block">
+				    		<blockquote class="card-blockquote">
+				      			<h2 id="p2Score">0</h2>
+				      		</blockquote>
+				  		</div>
+					</div>	
+	   			</div>
+	  		</div>
+		</div>
+	</div> <!--container-->
+</div> <!--quiz-->
+   
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="script/quiz.js"></script>
+	<script src="questions/questions.js"></script>
+	<script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
+  </body>
+</html>
