@@ -170,6 +170,11 @@ $( document ).ready(function() {
 				$('#mchoice').show();
 				choiceShown = true;
 			}
+		}else{
+			choiceShown = false;
+			$('#nochoice').show();	
+			$('#mchoice').hide();
+			$('#optionsBtn').hide();
 		}
 		$('#subBtn').show();	
 
