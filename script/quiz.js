@@ -48,7 +48,10 @@ $( document ).ready(function() {
 		$('#nochoice').hide();
 		showOptions();
 		$('#mchoice').show();
-		$('#marks').text(setValue(questions[currentQ].delayedPoints,points.delayedPoints));
+		if(!hasPassed){
+			$('#marks').text(setValue(questions[currentQ].delayedPoints,points.delayedPoints));	
+		}
+		
     });
 	
 	
