@@ -84,6 +84,11 @@ $( document ).ready(function() {
 			
 		}else{
 			answer = $('#answer').val();
+			if(answer == '<ans>'){
+				answer = rightAnswer;
+				$('#answer').val(rightAnswer)
+				
+			}
 			selector =$('#answer'); 
 		}
 			
